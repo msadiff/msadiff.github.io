@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="MSADiff: Contrastive Audio-Video Pretraining with Multi-Scale Discriminative and Generative Correspondence.">
+  <meta name="keywords" content="3D-Navigation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MSADiff: Contrastive Audio-Video Pretraining with Multi-Scale Discriminative and Generative Correspondence</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">MSADiff: Contrastive Audio-Video Pretraining with Multi-Scale Discriminative and Generative Correspondence</h1>
+          <div class="is-size-5 publication-authors">
+            Anonymous ACMMM Submission
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            ID: 4032
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <!-- <video id="teaser" autoplay muted playsinline loop height="100%">
+        <source src="assets/videos/ours/1.mp4"
+                type="video/mp4">
+      </video> -->
+      <h2 class="subtitle has-text-centered">
+        We introduce MSADiff, a novel framework that unifies contrastive learning with multi-scale generative modeling for cross-modal pretraining.
+      </h2>
+    </div>
+    <div class="hero-body has-text-centered">
+      <img src="assets/framework.png" width="840" height="600"/>
+      <h2 class="subtitle has-text-centered">
+        Our MSADiff leverages the Multi-scale Spatial-temporal Alignment to capture fine-grained hierarchical dependencies for enhanced video-audio correspondence. 
+        Then, Multi-scale Spatial-temporal Diffusion is proposed to bridge the generative gap between video and audio representations for improved video-to-audio synthesis.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <hr>
+        <div class="content has-text-justified">
+          <p>
+            Cross-modal understanding and generation, particularly in video-to-audio tasks, have seen significant progress with models leveraging contrastive learning to align video and audio embeddings. 
+            Prior works employ contrastive pretraining to improve modality alignment, while diffusion-based generative models have demonstrated promising results in synthesizing high-quality audio from visual inputs. 
+            However, existing methods often struggle to capture the fine-grained multi-scale spatial-temporal dependencies required for effective cross-modal understanding and high-fidelity audio generation. 
+            To address this, we introduce MSADiff, a novel framework that unifies contrastive learning with multi-scale generative modeling for cross-modal pretraining. 
+            MSADiff incorporates a multi-scale spatial-temporal alignment mechanism to enhance video-audio correspondence and leverages a diffusion-based decoder conditioned on multi-scale video representations for high-quality audio synthesis. 
+            By integrating discriminative and generative objectives, our approach ensures robust cross-modal alignment while improving the fidelity and coherence of generated audio. 
+            Extensive experiments on VGGSound and AudioSet demonstrate that MSADiff outperforms state-of-the-art methods in video-to-audio generation and retrieval.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Experiments</h2>
+        <hr>
+        <!-- <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div> -->
+        <div class="column has-text-centered">
+          <img src="assets/title_image.png" width="480" height="360"/>
+          <p>Comparison with state-of-the-art approaches on rhythmical (KLD, FAD) and semantical (Align Acc) metrics. </p>
+          <p>Our method achieves the best results compared to previous methods.
+          </p>
+        </div>
+        <hr>
+        <div class="column has-text-centered">
+          <img src="assets/table_sota.png" width="360" height="240"/>
+          <p>Comparison results on VGGSound test set for video-to-audio generation. Our MSADiff achieves the best performance. </p>
+        </div>
+        <hr>
+        <div class="column has-text-centered">
+          <img src="assets/table_retrieval.png" width="360" height="240"/>
+          <p>Comparison results of video-to-audio retrieval and audio-to-video retrieval. Our MSADiff achieves the best results. </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="hero-body">
+        <h2 class="title is-3">Experimental Analyses</h2>
+        <hr>
+        <div class="column has-text-centered">
+          <img src="assets/table_ablation.png" width="720" height="480"/>
+          <p>Ablation studies on Multi-scale Spatial-temporal Alignment (MSA) and Multi-scale Spatial-temporal Diffusion (MSDiff) for video-to-audio generation and retrieval. </p>
+        </div>
+        <hr>
+        <div class="column has-text-centered">
+          <img src="assets/table_interval.png" width="480" height="360"/>
+          <p>Ablation studies of the number of diffusion bidirectional training intervals for video-to-audio generation and retrieval. </p>
+        </div>
+        <hr>
+        <div class="column has-text-centered">
+          <img src="assets/table_spatial.png" width="480" height="360"/>
+          <p>Ablation studies on the effect of spatial multi-scale for video-to-audio generation and retrieval. </p>
+        </div>
+        <hr>
+        <div class="column has-text-centered">
+          <img src="assets/table_scale.png" width="600" height="480"/>
+          <p>Ablation studies on data scaling of multi-scale spatial-temporal alignment for video-to-audio generation and retrieval. </p>
+        </div>
+        <hr>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Paper video comparison -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <h2 class="title is-2">Qualitative Video-to-Audio Generation</h2>
+        <hr>
+      </div>
+    </div>
+    <div class="columns is-centered">
+      <!-- SOTA Column -->
+      <div class="column is-half">
+        <div class="title is-3">State-of-the-Art (SOTA)</div>
+        <video id="sota_1" controls style="width: 100%; margin-bottom: 20px;">
+          <source src="assets/videos/sota/1.mp4" type="video/webm">
+          Your browser does not support the video tag.
+        </video>
+        <video id="sota_2" controls style="width: 100%;">
+          <source src="assets/videos/sota/2.mp4" type="video/webm">
+          Your browser does not support the video tag.
+        </video>
+        <video id="sota_3" controls style="width: 100%;">
+          <source src="assets/videos/sota/3.mp4" type="video/webm">
+          Your browser does not support the video tag.
+        </video>
+        <video id="sota_4" controls style="width: 100%;">
+          <source src="assets/videos/sota/4.mp4" type="video/webm">
+          Your browser does not support the video tag.
+        </video>
+        <video id="sota_5" controls style="width: 100%;">
+          <source src="assets/videos/sota/5.mp4" type="video/webm">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <!-- Ours Column -->
+      <div class="column is-half">
+        <div class="title is-3">MSADiff (Ours)</div>
+        <video id="ours_1" controls style="width: 100%; margin-bottom: 20px;">
+          <source src="assets/videos/ours/1.mp4" type="video/webm">
+          Your browser does not support the video tag.
+        </video>
+        <video id="ours_2" controls style="width: 100%;">
+          <source src="assets/videos/ours/2.mp4" type="video/webm">
+          Your browser does not support the video tag.
+        </video>
+        <video id="ours_3" controls style="width: 100%;">
+          <source src="assets/videos/ours/3.mp4" type="video/webm">
+          Your browser does not support the video tag.
+        </video>
+        <video id="ours_4" controls style="width: 100%;">
+          <source src="assets/videos/ours/4.mp4" type="video/webm">
+          Your browser does not support the video tag.
+        </video>
+        <video id="ours_5" controls style="width: 100%;">
+          <source src="assets/videos/ours/5.mp4" type="video/webm">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content has-text-centered">
+          <p>
+            Thanks for watching our demo!
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
